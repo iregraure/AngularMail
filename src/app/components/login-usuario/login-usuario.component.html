@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm">
+    <input type="text" id="usuario" formControlName="usuario">
+    <div *ngIf="this.loginForm.controls.usuario.errors?.required">Es obligatorio indicar el nombre del usuario</div>
+    <div *ngIf="this.loginForm.controls.usuario.errors?.minlength">El usuario debe tener al menos 4 caracteres</div>
+    <input type="password" id="pass" formControlName="pass">
+    <div *ngIf="this.loginForm.controls.pass.errors?.required">Es obligatorio indicar la contraseña</div>
+    <button type="button" (click)="autenticaUsuario()">Autenticar</button>
+</form>
+<div id="respuestaDelServidor"></div>

@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "AngularMail"
+  "defaultProject": "AngularMail",
+  "cli": {
+    "analytics": false
+  }
 }
